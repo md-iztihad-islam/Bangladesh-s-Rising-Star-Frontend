@@ -1,6 +1,6 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
-const NEWS_API = 'http://localhost:5011/api/v1/news';
+const NEWS_API = 'http://localhost:8000/api/v1/news';
 
 const newsApi = createApi({
     reducerPath: "newsApi",
