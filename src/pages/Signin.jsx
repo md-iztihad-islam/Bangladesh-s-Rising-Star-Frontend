@@ -31,7 +31,7 @@ function Signin(){
     }, [isSuccess, isError]);
     return(
         <div className="flex flex-col justify-center items-center">
-            <div className="flex flex-col justify-center items-center mt-10 mb-10 border-2 p-5 w-[40%]">
+            <div className="flex flex-col justify-center items-center mt-10 mb-10 border-2 p-5 w-[80%] md:w-[40%]">
                 <h1 className="text-xl md:text-3xl font-bold mb-10">Sign in</h1>
                 <div>
                     <form onSubmit={handleSubmit}>

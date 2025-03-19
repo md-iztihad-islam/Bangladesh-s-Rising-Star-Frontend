@@ -23,11 +23,11 @@ function Home(){
 
     return(
         <div>
-            <div className="ml-5 mr-5 md:ml-60 md:mr-60 mt-0 mb-10 p-5">
+            <div className="ml-5 mr-5 md:flex md:flex-col md:justify-center md:items-center lg:ml-60 lg:mr-60 mt-0 mb-10 p-5">
                 <div className="flex justify-center items-center">
                     <img src={"/logo.png"} alt="" className="mt-0 h-[400px] w-[400px]" />
                 </div>
-                <div className="h-[200px] w-full md:w-[500px]  mb-10 md:ml-60 md:mr-30 bg-gray-400 rounded-md flex flex-col justify-around items-center">
+                <div className="h-[200px] w-full md:w-[500px]  mb-10 lg:ml-60 lg:mr-60 bg-gray-400 rounded-md flex flex-col justify-around items-center">
                     <h1 className="text-xl md:text-3xl font-bold text-red-500">WE ARE LAUNCING!!!</h1>
                     <CountDown />
                 </div>

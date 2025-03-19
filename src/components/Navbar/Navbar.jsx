@@ -24,7 +24,7 @@ function Navbar(){
                 </div>
             </div>
 
-            <div id="lowerPart" className="w-full h-[80px] md:h-[50px] text-black flex flex-wrap justify-around items-center pl-5 pr-5 md:pl-30 md:pr-30 bg-gray-500">
+            <div id="lowerPart" className="w-full h-[120px] md:h-[50px] text-black flex flex-wrap justify-around items-center pl-5 pr-5 md:pl-5 md:pr-5 bg-gray-500">
                 <button onClick={() => navigate("/")} className="btn btn-ghost sm:btn-sm md:btn-md lg:btn-lg text-black hover:bg-gray-300">Home</button>
                 <button onClick={() => navigate("/about")} className="btn btn-ghost sm:btn-sm md:btn-md lg:btn-lg text-black hover:bg-gray-300">About</button>
                 <button onClick={() => navigate("/live")} className="btn btn-ghost sm:btn-sm md:btn-md lg:btn-lg text-black hover:bg-gray-300">Watch Live</button>
