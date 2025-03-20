@@ -145,9 +145,7 @@ function Home(){
                 </div>
 
                 <div id="partners">
-                    <div>
-                        <img src="" alt="" />
-                    </div>
+                    
                 </div>
             </div>
         </div>
