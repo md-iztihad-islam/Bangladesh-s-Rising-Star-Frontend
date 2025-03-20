@@ -3,6 +3,7 @@ import CountDown from "../../components/Extra/CountDown";
 import { useGetNewsQuery } from "../../api/newsApi";
 import { useGetAllMatchesQuery, useGetTournamentQuery } from "../../api/tournamentApi";
 import { useGetLiveQuery } from "../../api/liveApi";
+import { div } from "motion/react-client";
 
 function Home(){
     const navigate = useNavigate();
@@ -125,28 +126,28 @@ function Home(){
                     </div>
                 </div>
 
-                <div id="tournamentsPart" className="mt-10 border-1 w-full grid grid-cols-1 md:grid-cols-2 gap-4">
-                        {
-                            tournamentData?.map((tournament) => (
-                                <div key={tournament._id} className="card bg-base-100 shadow-md">
-                                    <div className="card-body">
-                                        <h2 className="font-bold text-xl">{tournament.tournamentName} {tournament.tournamentType}</h2>
-                                        <div>
-                                            {
-                                                tournament.teams?.map((team, index) => (
-                                                    <div key={team._id} className="hover:bg-gray-300 flex flex-col gap-10" onClick={() => navigate(`/${tournament._id}/${team._id}`)}>
-                                                        <div className="flex gap-10">
-                                                            <img src={team.teamLogo} className="w-[50px] h-[50px] rounded-md" alt="" />
-                                                            <h1 className="text-lg font-semibold">{team.teamName}</h1>
-                                                        </div>
-                                                    </div>
-                                                ))
-                                            }
+                <div id="tournamentsPart" className="mt-10 flex flex-col gap-10 justify-center items-center">
+                    <div>
+                        <h1 className="font-bold text-md md:text-3xl">Teams</h1>
+                        <div className="carousel carousel-center rounded-box">
+                            {
+                                tournamentData?.teams?.map((team) => (
+                                    <div className="carousel-item" key={team._id}>
+                                        <div className="flex flex-col gap-2 justify-center items-center" onClick={() => navigate(`/${tournamentData?._id}/${team._id}`)}>
+                                            <img src={team?.teamLogo} alt="teams" className="h-[200px] w-[200px] m-5" />
+                                            <p>{team.teamName}</p>
                                         </div>
                                     </div>
-                                </div>
-                            ))
-                        }
+                                ))
+                            }
+                        </div>
+                    </div>
+                </div>
+
+                <div id="partners">
+                    <div>
+                        <img src="" alt="" />
+                    </div>
                 </div>
             </div>
         </div>

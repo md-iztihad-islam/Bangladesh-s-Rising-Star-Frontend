@@ -11,6 +11,7 @@ function AddTeam(){
     const [ institutionName, setInstitutionName ] = useState("");
     const [ teamManagerName, setTeamManagerName ] = useState("");
     const [ teamLogo, setTeamLogo ] = useState("");
+    const [teamGroup, setTeamGroup] = useState("");
 
     const onChangeHandler = (event) => {
         const file = event.target.files?.[0];
@@ -30,6 +31,7 @@ function AddTeam(){
         formData.append("institutionName", institutionName);
         formData.append("teamManagerName", teamManagerName);
         formData.append("teamLogo", teamLogo);
+        formData.append("teamGroup", teamGroup);
 
         await createTeam({ tournamentId, teamData: formData });
     };
@@ -90,6 +92,11 @@ function AddTeam(){
                     <div className="flex flex-col gap-5 mt-5">
                         <label>Manager Name:</label>
                         <input value={teamManagerName} onChange={(e) => setTeamManagerName(e.target.value)} type="text" className="w-[300px] md:w-[600px] border-1 border-gray-300 rounded-md p-2" />
+                    </div>
+
+                    <div className="flex flex-col gap-5 mt-5">
+                        <label>Group:</label>
+                        <input value={teamGroup} onChange={(e) => setTeamGroup(e.target.value)} placeholder="A / B" type="text" className="w-[300px] md:w-[600px] border-1 border-gray-300 rounded-md p-2" />
                     </div>
 
                     <div className="flex flex-col gap-5 mt-5">

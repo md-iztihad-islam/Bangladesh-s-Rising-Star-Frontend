@@ -1,6 +1,6 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
-const TOURNAMENT_API = 'http://api.bangladeshsrisingstars.com/api/v1/tournament';
+const TOURNAMENT_API = 'https://api.bangladeshsrisingstars.com/api/v1/tournament';
 
 export const tournamentApi = createApi({
     reducerPath: "tournamentApi",

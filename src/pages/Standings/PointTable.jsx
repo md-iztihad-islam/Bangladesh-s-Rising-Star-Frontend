@@ -17,40 +17,81 @@ function PointTable(){
         return b.goalsDifference - a.goalsDifference; // If points are same, sort by GD
     }) || [];
 
+    // Separate teams into Group A and Group B
+    const groupATeams = sortedTeams.filter(team => team.teamGroup === "A");
+    const groupBTeams = sortedTeams.filter(team => team.teamGroup === "B");
+
     return(
         <div>
             <div className="flex flex-col mb-10 justify-center items-center mt-10">
                 <h1 className="text-xl md:text-3xl font-bold">Standings of Teams in Tournaments</h1>
                 <div>
-                    <div className="overflow-x-auto rounded-box border border-base-content/5 bg-base-100">
-                        <table className="table">
-                            {/* head */}
-                            <thead>
-                            <tr>
-                                <th>Position</th>
-                                <th>Team</th>
-                                <th>GS</th>
-                                <th>GC</th>
-                                <th>GD</th>
-                                <th>Points</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                                {
-                                    sortedTeams?.map((team, index) => (
-                                        <tr key={team._id}>
-                                            <th>{index+1}</th>
-                                            <td>{team?.teamName}</td>
-                                            <td>{team?.goalsScored}</td>
-                                            <td>{team?.goalsConceded}</td>
-                                            <td>{team?.goalsDifference}</td>
-                                            <td>{team?.points}</td>
-                                        </tr>
-                                    ))
-                                }
-                            </tbody>
-                        </table>
+                    <div id="groupA" className="flex flex-col gap-5 mt-5">
+                        <h2 className="text-lg font-bold">Group A</h2>
+                        <div className="overflow-x-auto rounded-box border border-base-content/5 bg-base-100">
+                            <table className="table">
+                                {/* head */}
+                                <thead>
+                                <tr>
+                                    <th>Position</th>
+                                    <th>Team</th>
+                                    <th>GS</th>
+                                    <th>GC</th>
+                                    <th>GD</th>
+                                    <th>Points</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                    {
+                                        groupATeams?.map((team, index) => (
+                                            <tr key={team._id}>
+                                                <th>{index+1}</th>
+                                                <td>{team?.teamName}</td>
+                                                <td>{team?.goalsScored}</td>
+                                                <td>{team?.goalsConceded}</td>
+                                                <td>{team?.goalsDifference}</td>
+                                                <td>{team?.points}</td>
+                                            </tr>
+                                        ))
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
+
+                    <div id="groupB" className="flex flex-col gap-5 mt-5">
+                        <h2 className="text-lg font-bold">Group B</h2>
+                        <div className="overflow-x-auto rounded-box border border-base-content/5 bg-base-100">
+                            <table className="table">
+                                {/* head */}
+                                <thead>
+                                <tr>
+                                    <th>Position</th>
+                                    <th>Team</th>
+                                    <th>GS</th>
+                                    <th>GC</th>
+                                    <th>GD</th>
+                                    <th>Points</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                    {
+                                        groupBTeams?.map((team, index) => (
+                                            <tr key={team._id}>
+                                                <th>{index+1}</th>
+                                                <td>{team?.teamName}</td>
+                                                <td>{team?.goalsScored}</td>
+                                                <td>{team?.goalsConceded}</td>
+                                                <td>{team?.goalsDifference}</td>
+                                                <td>{team?.points}</td>
+                                            </tr>
+                                        ))
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
                 </div>
 
                 <div>

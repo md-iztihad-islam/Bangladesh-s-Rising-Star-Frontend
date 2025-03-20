@@ -1,6 +1,6 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
-const PRODUCT_API = 'http://api.bangladeshsrisingstars.com/api/v1/product';
+const PRODUCT_API = 'https://api.bangladeshsrisingstars.com/api/v1/product';
 
 export const productApi = createApi({
     reducerPath: "liveApi",
