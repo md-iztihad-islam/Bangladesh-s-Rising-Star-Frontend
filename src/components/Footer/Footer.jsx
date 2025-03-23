@@ -3,11 +3,6 @@ import './Footer.css';
 function Footer(){
     return(
         <div>
-            <div className='flex gap-10 bg-gray-300'>
-                <p className='text-lg font-bold'>OUR PARTNERS:</p>
-                <img src="/fresh.png" className='h-[50px] w-[100px]' alt="" />
-                <img src="/prime.png" className='h-[50px] w-[100px]' alt="" />
-            </div>
             <footer className="footer sm:footer-horizontal bg-neutral text-neutral-content p-10">
                 <aside>
                     <img src={"/logo.png"} className='h-[100px] w-[100px]' alt="logo" />

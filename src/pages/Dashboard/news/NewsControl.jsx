@@ -18,23 +18,23 @@ function NewsControl(){
 
     const [createNews, {isSuccess, isError}] = useCreateNewsMutation();
 
-    const newsObject = {
-        newsId,
-        newsTitle,
-        newsDescription,
-        newsDate,
-        newsImage,
-        newsLink
+    const onChangeHandler = (event) => {
+        const file = event.target.files?.[0];
+        if(file){
+            setNewsImage(file);
+        }
     };
 
     const createHandler = async () => {
-        await createNews(newsObject);
-        setNewsId('');
-        setNewsTitle('');
-        setNewsDescription('');
-        setNewsDate('');
-        setNewsImage('');
-        setNewsLink('');
+        const formData = new FormData();
+        formData.append("newsId", newsId);
+        formData.append("newsTitle", newsTitle);
+        formData.append("newsDescription", newsDescription);
+        formData.append("newsDate", newsDate);
+        formData.append("newsImage", newsImage);
+        formData.append("newsLink", newsLink);
+
+        await createNews(formData);
     };
 
     useEffect(() => {
@@ -48,8 +48,8 @@ function NewsControl(){
 
     const [deleteNews, {isSuccess: deleteSuccess, isError: deleteError}] = useDeleteNewsMutation();
 
-    const deleteHandler = async (newsId) => {
-        await deleteNews(newsId);
+    const deleteHandler = async (id) => {
+        await deleteNews(id);
     };
 
     useEffect(() => {
@@ -88,7 +88,7 @@ function NewsControl(){
 
                     <div className="flex flex-col gap-5">
                         <label>News Image</label>
-                        <input value={newsImage} onChange={(e) => setNewsImage(e.target.value)} type="text" className="w-[300px] md:w-[600px] border-1 border-gray-300 rounded-md p-2" />
+                        <input onChange={onChangeHandler} type="file" className="w-[300px] md:w-[600px] border-1 border-gray-300 rounded-md p-2" />
                     </div>
                     
                     <div className="flex flex-col gap-5">

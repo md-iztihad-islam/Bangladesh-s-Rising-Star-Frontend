@@ -24,7 +24,7 @@ function Home(){
 
     return(
         <div>
-            <div className="ml-5 mr-5 md:flex md:flex-col md:justify-center md:items-center lg:ml-60 lg:mr-60 mt-0 mb-10 p-5">
+            <div className="ml-5 mr-5 md:flex md:flex-col md:justify-center md:items-center lg:ml-30 lg:mr-30 mt-0 mb-10 p-5">
                 <div className="flex justify-center items-center">
                     <img src={"/logo.png"} alt="" className="mt-0 h-[400px] w-[400px]" />
                 </div>
@@ -37,7 +37,7 @@ function Home(){
                     <div className="relative w-full h-[315px]">
                         <iframe
                             className="w-full h-full" 
-                            src={matchList[0]?.videoUrl || "https://www.youtube.com/embed/9bZkp7q19f0"}
+                            src={matchList[0]?.videoUrl || "https://www.youtube.com/embed/396-VyGW5Os?si=06dfSxON5kx6BbSq"}
                             title="YouTube video player"
                             allowFullScreen
                         ></iframe>
@@ -79,7 +79,7 @@ function Home(){
                     }
                 </div>
 
-                <div id="livePart" className="flex flex-col gap-5 mt-10">
+                <div id="livePart" className="flex flex-col justify-center items-center mt-10">
                     <h1 className="font-bold text-md md:text-3xl">Live Matches of Dhaka's Rising Star</h1>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-5">
                         {
@@ -100,7 +100,7 @@ function Home(){
                     </div>
                 </div>
 
-                <div id="newsPart">
+                <div id="newsPart" className="flex flex-col justify-center items-center mt-10">
                     <h1 className="font-bold text-md md:text-3xl mt-10">Latest News</h1>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-5">
                         {newsList?.map((news) => {
@@ -144,9 +144,39 @@ function Home(){
                     </div>
                 </div>
 
-                <div id="partners">
-                    
+                <div id="partners" className="flex flex-col justify-center items-center mt-10">
+                    <h1 className="font-bold text-md md:text-3xl">Our Partners</h1>
+                    <div className="flex flex-wrap gap-4 justify-center items-center mt-5">
+                        <img src="/bff.jpg" alt="bff" className="h-[80px] w-[80px] md:h-[150px] md:w-[150px]" />
+                        <img src="/tguc.jpg" alt="bff" className="h-[80px] w-[80px] md:h-[150px] md:w-[150px]" />
+                        <img src="/fs.jpg" alt="bff" className="h-[80px] w-[80px] md:h-[150px] md:w-[150px]" />
+                        <img src="/fifa.png" alt="bff" className="h-[80px] w-[80px] md:h-[150px] md:w-[150px]" />
+                        <img src="/afc.jpg" alt="bff" className="h-[80px] w-[80px] md:h-[150px] md:w-[150px]" />
+                    </div>
                 </div>
+
+
+                <div id="sponsors" className="flex flex-col justify-center items-center mt-10">
+                    <h1 className="font-bold text-md md:text-3xl">Our Sponsors</h1>
+                    <div className="flex flex-wrap gap-4 justify-center items-center mt-5">
+                        <img src="/fresh.png" alt="bff" className="h-[80px] w-[80px] md:h-[150px] md:w-[150px]" />
+                        <img src="/prime.png" alt="bff" className="h-[80px] w-[80px] md:h-[150px] md:w-[150px]" />
+                        <img src="/dr.jpg" alt="bff" className="h-[80px] w-[80px] md:h-[150px] md:w-[150px]" />
+                    </div>
+                </div>
+
+
+                <div id="venueSponsors" className="flex flex-col justify-center items-center mt-10">
+                    <h1 className="font-bold text-md md:text-3xl">Our Venue Sponsor</h1>
+                    <div className="flex flex-wrap gap-4 justify-center items-center mt-5">
+                        <img src="/fg.jpg" alt="bff" className="h-[80px] w-[80px] md:h-[150px] md:w-[150px]" />
+                    </div>
+                </div>
+
+
+
+
+
             </div>
         </div>
     );
