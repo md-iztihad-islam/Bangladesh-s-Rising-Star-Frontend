@@ -29,7 +29,7 @@ function Home(){
                     <img src={"/logo.png"} alt="" className="mt-0 h-[400px] w-[400px]" />
                 </div>
                 <div className="h-[200px] w-full md:w-[500px]  mb-10 lg:ml-60 lg:mr-60 bg-gray-400 rounded-md flex flex-col justify-around items-center">
-                    <h1 className="text-xl md:text-3xl font-bold text-red-500">WE ARE LAUNCING!!!</h1>
+                    <h1 className="text-xl md:text-3xl font-bold text-red-500">WE ARE LAUNCHING!!!</h1>
                     <CountDown />
                 </div>
 
