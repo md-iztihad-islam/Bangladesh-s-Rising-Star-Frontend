@@ -165,12 +165,12 @@ function Home() {
                         matches?.map((match) => (
                             <div key={match._id}>
                                 {
-                                    true ? (
+                                    match.isPlayed ? (
                                         <div onClick={() => navigate(`/highlights/${match._id}/${match.tournament._id}`)}  className="cursor-pointer hover:shadow-lg transform hover:scale-105 duration-300 ease-in-out mt-10">
                                             <div className="card bg-base-100 w-80 shadow-sm flex justify-center items-center">
                                                 <figure>
                                                     <iframe
-                                                        src={match.videoUrl || "https://www.youtube.com/embed/ilNt2bikxDI?si=SjDy3ytMBcp_cMVm"}
+                                                        src={match.videoUrl || "https://www.youtube.com/embed/wZPnZzKJuFI?si=-E-PNe18OVTwU9CQ"}
                                                         allowFullScreen
                                                     ></iframe>
                                                 </figure>
