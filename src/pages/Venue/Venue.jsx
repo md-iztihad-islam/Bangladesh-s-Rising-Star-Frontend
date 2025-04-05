@@ -10,7 +10,7 @@ function Venue(){
                 <h1 className="text-xl md:text-3xl font-bold">Venues</h1>
                 <div className="flex flex-col justify-center items-start mt-10 mb-10 p-5">
                     {
-                        venueData.map((Venue) => (
+                        venueData?.map((Venue) => (
                             <div>
                                 <div className="flex flex-col justify-center items-center mb-10">
                                     <h1 className="text-xl md:text-3xl font-bold">{Venue.venueName}</h1>
