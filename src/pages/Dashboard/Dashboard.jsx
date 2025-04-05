@@ -13,6 +13,7 @@ function Dashboard(){
                     <button onClick={() => navigate("/admin/newscontrol")} className="w-[150px] h-[40px] bg-gray-200 hover:bg-gray-400 cursor-pointer rounded-md">News Control</button>
                     <button onClick={() => navigate("/admin/livecontrol")} className="w-[150px] h-[40px] bg-gray-200 hover:bg-gray-400 cursor-pointer rounded-md">Live Control</button>
                     <button onClick={() => navigate("/admin/productcontrol")} className="w-[150px] h-[40px] bg-gray-200 hover:bg-gray-400 cursor-pointer rounded-md">Product Control</button>
+                    <button onClick={() => navigate("/admin/venuecontrol")} className="w-[150px] h-[40px] bg-gray-200 hover:bg-gray-400 cursor-pointer rounded-md">Venue Control</button>
                 </div>
             </div>
         </div>

@@ -81,10 +81,10 @@ export const tournamentApi = createApi({
             })
         }),
         addmatch: builder.mutation({
-            query: ({ tournamentId, matchData }) => ({
+            query: ({ tournamentId, formData }) => ({
                 url: `${tournamentId}/creatematch`,
                 method: "POST",
-                body: matchData
+                body: formData
             })
         }),
         getMatchByTournament: builder.query({

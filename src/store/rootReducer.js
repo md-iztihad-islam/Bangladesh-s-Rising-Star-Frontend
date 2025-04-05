@@ -6,6 +6,7 @@ import { liveApi } from "../api/liveApi";
 import newsApi from "../api/newsApi";
 import { tournamentApi } from "../api/tournamentApi";
 import { productApi } from "../api/productApi";
+import { venueApi } from "../api/venueApi";
 
 const rootReducer = combineReducers({
     [authApi.reducerPath]: authApi.reducer,
@@ -14,6 +15,7 @@ const rootReducer = combineReducers({
     [newsApi.reducerPath]: newsApi.reducer,
     [tournamentApi.reducerPath]: tournamentApi.reducer,
     [productApi.reducerPath]: productApi.reducer,
+    [venueApi.reducerPath]: venueApi.reducer,
     auth: authReducer,
 });
 

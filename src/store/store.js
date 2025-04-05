@@ -6,10 +6,11 @@ import { liveApi } from "../api/liveApi";
 import newsApi from "../api/newsApi";
 import { tournamentApi } from "../api/tournamentApi";
 import { productApi } from "../api/productApi";
+import { venueApi } from "../api/venueApi";
 
 export const appStore = configureStore({
     reducer: rootReducer,
-    middleware: (defaultMiddleware) => defaultMiddleware().concat(authApi.middleware, aboutApi.middleware, liveApi.middleware, newsApi.middleware, tournamentApi.middleware, productApi.middleware),      
+    middleware: (defaultMiddleware) => defaultMiddleware().concat(authApi.middleware, aboutApi.middleware, liveApi.middleware, newsApi.middleware, tournamentApi.middleware, productApi.middleware, venueApi.middleware),      
 });
 
 const initializeApp = async () => {

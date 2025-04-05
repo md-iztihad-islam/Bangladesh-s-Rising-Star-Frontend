@@ -31,6 +31,11 @@ import Standings from "../pages/Standings/Standings";
 import PointTable from "../pages/Standings/PointTable";
 import ProductControl from "../pages/Dashboard/product/ProductControl";
 import { AdminRoute, ProtectedRoute } from "../components/Extra/ProtectedRoutes";
+import News from "../pages/News/News";
+import TeamsFirst from "../pages/Teams/TeamsFirst";
+import Teams from "../pages/Teams/Teams";
+import Venue from "../pages/Venue/Venue";
+import VenueControl from "../pages/Dashboard/venue/VenueControl";
 
 const appRouter = createBrowserRouter([
     {
@@ -62,6 +67,10 @@ const appRouter = createBrowserRouter([
                 element: <ProtectedRoute> <Profile /> </ProtectedRoute>
             },
             {
+                path: "/news",
+                element: <News />
+            },
+            {
                 path: "/about",
                 element: <About />
             },
@@ -90,8 +99,20 @@ const appRouter = createBrowserRouter([
                 element: <PointTable />
             },
             {
-                path: "/tournament",
+                path: "/fixture",
                 element: <Tournament />
+            },
+            {
+                path: "/teams",
+                element: <TeamsFirst />
+            },
+            {
+                path: "/teams/:tournamentId",
+                element: <Teams />
+            },
+            {
+                path: "/venue",
+                element: <Venue />
             },
             {
                 path: "/tournament/:tournamentId/fixtures",
@@ -128,6 +149,10 @@ const appRouter = createBrowserRouter([
             {
                 path: "/admin/productcontrol",
                 element: <AdminRoute> <ProductControl /> </AdminRoute>
+            },
+            {
+                path: "/admin/venuecontrol",
+                element: <AdminRoute> <VenueControl /> </AdminRoute>
             },
             {
                 path: "/admin/tournamentcontrol",

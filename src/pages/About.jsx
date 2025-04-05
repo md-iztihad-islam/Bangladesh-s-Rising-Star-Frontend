@@ -12,9 +12,10 @@ function About(){
 
     return(
         <div className="flex justify-center items-center mb-10">
-            <div className="flex justify-center items-center max-w-4xl w-full">
-                <div className="flex flex-col gap-5">
-                    <h1 className="text-xl md:text-3xl font-bold ml-5 mt-5 mb-5">About</h1>
+            <div className="flex justify-center items-center max-w-4xl w-full p-4">
+                <div className="flex flex-col gap-2">
+                    <h1 className="text-xl md:text-3xl font-bold ml-5 mt-5">About</h1>
+                    <img src="/logo.png" className="w-[300px] h-[300px]" alt="" />
                     {/* <img src={aboutData?.image} alt="" className="mb-5" />
                     <p className="text-justify m-5">{aboutData?.description}</p> */}
                     <div className="text-justify">

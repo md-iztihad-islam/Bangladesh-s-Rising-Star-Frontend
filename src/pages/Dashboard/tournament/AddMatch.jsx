@@ -12,27 +12,45 @@ function AddMatch(){
     const [matchTime, setMatchTime] = useState("");
     const [matchVenue, setMatchVenue] = useState("");
     const [matchTeam1, setMatchTeam1] = useState("");
+    const [matchTeam1Logo, setMatchTeam1Logo] = useState("");
     const [matchTeam2, setMatchTeam2] = useState("");
+    const [matchTeam2Logo, setMatchTeam2Logo] = useState("");
     const [stage, setStage] = useState("");
 
-    const matchData = {
-        matchNo,
-        matchDate,
-        matchTime,
-        matchVenue,
-        matchTeam1,
-        matchTeam2,
-        stage,
+    const [addMatch, {isSuccess, isError}] = useAddmatchMutation();
+
+    const onChangeHandler01 = (event) => {
+        const file = event.target.files?.[0];
+        if(file){
+            setMatchTeam1Logo(file);
+        }
+    };
+
+    const onChangeHandler02 = (event) => {
+        const file = event.target.files?.[0];
+        if(file){
+            setMatchTeam2Logo(file);
+        }
+    };
+
+    const createHandler = async () => {
+        const formData = new FormData();
+        formData.append("matchNo", matchNo);
+        formData.append("matchDate", matchDate);
+        formData.append("matchTime", matchTime);
+        formData.append("matchVenue", matchVenue);
+        formData.append("matchTeam1", matchTeam1);
+        formData.append("matchTeam1Logo", matchTeam1Logo);
+        formData.append("matchTeam2", matchTeam2);
+        formData.append("matchTeam2Logo", matchTeam2Logo);
+        formData.append("stage", stage);
+
+        await addMatch({ tournamentId, formData });
     };
 
     const {data, refetch} = useGetMatchByTournamentQuery(tournamentId);
     const matchList = data?.data;
 
-    const [addMatch, {isSuccess, isError}] = useAddmatchMutation();
-
-    const addHandler = async () => {
-        await addMatch({ tournamentId, matchData });
-    };
     useEffect(() => {
         if(isSuccess){
             setMatchNo("");
@@ -41,6 +59,9 @@ function AddMatch(){
             setMatchVenue("");
             setMatchTeam1("");
             setMatchTeam2("");
+            setStage("");
+            setMatchTeam1Logo("");
+            setMatchTeam2Logo("");
             refetch();
         }
         if(isError){
@@ -81,8 +102,18 @@ function AddMatch(){
                     </div>
 
                     <div className="flex flex-col gap-5 mt-5">
+                        <label>Team-01 Logo:</label>
+                        <input onChange={onChangeHandler01} type="file" className="w-[300px] md:w-[600px] border-1 border-gray-300 rounded-md p-2" />
+                    </div>
+
+                    <div className="flex flex-col gap-5 mt-5">
                         <label>Team 02:</label>
                         <input value={matchTeam2} onChange={(e) => setMatchTeam2(e.target.value)} type="text" className="w-[300px] md:w-[600px] border-1 border-gray-300 rounded-md p-2" />
+                    </div>
+
+                    <div className="flex flex-col gap-5 mt-5">
+                        <label>Team-02 Logo:</label>
+                        <input onChange={onChangeHandler02} type="file" className="w-[300px] md:w-[600px] border-1 border-gray-300 rounded-md p-2" />
                     </div>
 
                     <div className="flex flex-col gap-5 mt-5">
@@ -92,7 +123,7 @@ function AddMatch(){
                 </div>
 
                 <div className="flex gap-5 mt-5">
-                    <button onClick={addHandler} className="w-[150px] h-[40px] bg-gray-200 hover:bg-gray-400 mt-10 rounded-md">Add</button>
+                    <button onClick={createHandler} className="w-[150px] h-[40px] bg-gray-200 hover:bg-gray-400 mt-10 rounded-md">Add</button>
                     <button onClick={() => navigate(`/admin/tournamentcontrol`)} className="w-[150px] h-[40px] bg-gray-200 hover:bg-gray-400 mt-10 rounded-md">Back</button>
                 </div>
 

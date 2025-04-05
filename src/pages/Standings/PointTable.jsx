@@ -18,8 +18,8 @@ function PointTable(){
     }) || [];
 
     // Separate teams into Group A and Group B
-    const groupATeams = sortedTeams.filter(team => team.teamGroup === "A");
-    const groupBTeams = sortedTeams.filter(team => team.teamGroup === "B");
+    const groupATeams = sortedTeams.filter(team => team.teamGroup === "1");
+    const groupBTeams = sortedTeams.filter(team => team.teamGroup === "2");
 
     return(
         <div>
@@ -27,7 +27,7 @@ function PointTable(){
                 <h1 className="text-xl md:text-3xl font-bold">Standings of Teams in Tournaments</h1>
                 <div>
                     <div id="groupA" className="flex flex-col gap-5 mt-5">
-                        <h2 className="text-lg font-bold">Group A</h2>
+                        <h2 className="text-lg font-bold">Group 01</h2>
                         <div className="overflow-x-auto rounded-box border border-base-content/5 bg-base-100">
                             <table className="table">
                                 {/* head */}
@@ -60,7 +60,7 @@ function PointTable(){
                     </div>
 
                     <div id="groupB" className="flex flex-col gap-5 mt-5">
-                        <h2 className="text-lg font-bold">Group B</h2>
+                        <h2 className="text-lg font-bold">Group 02</h2>
                         <div className="overflow-x-auto rounded-box border border-base-content/5 bg-base-100">
                             <table className="table">
                                 {/* head */}
