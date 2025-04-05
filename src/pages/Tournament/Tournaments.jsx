@@ -27,7 +27,7 @@ export default Tournament;
 
 function Card({onClick, data}){
     return(
-        <div onClick={onClick} className="cursor-pointer hover:shadow-lg transform hover:scale-105 duration-300 ease-in-out">
+        <div onClick={onClick} className="z-0 cursor-pointer hover:shadow-lg transform hover:scale-105 duration-300 ease-in-out">
             <div className="card bg-base-100 w-80 shadow-sm">
                 <figure>
                     <img

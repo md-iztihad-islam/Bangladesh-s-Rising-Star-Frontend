@@ -42,7 +42,7 @@ function Navbar(){
                                 Menu
                             </label>
                         </div>
-                        <div className="drawer-side">
+                        <div className="drawer-side z-1">
                             <label htmlFor="my-drawer-2" aria-label="close sidebar" className="drawer-overlay"></label>
                             <ul className="menu bg-base-200 text-base-content min-h-full w-80 p-4" onClick={closeDrawer}>
                             {/* Sidebar content here */}

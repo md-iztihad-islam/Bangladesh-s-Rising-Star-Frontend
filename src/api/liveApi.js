@@ -1,7 +1,7 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
-const LIVE_API = 'https://api.bangladeshsrisingstars.com/api/v1/live';
-//const LIVE_API = 'http://localhost:8000/api/v1/live';
+//const LIVE_API = 'https://api.bangladeshsrisingstars.com/api/v1/live';
+const LIVE_API = 'http://localhost:8000/api/v1/live';
 
 export const liveApi = createApi({
     reducerPath: "liveApi",

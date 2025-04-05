@@ -51,7 +51,7 @@ function Home() {
                             // });
 
                             return (
-                                <a key={news._id} className="cursor-pointer w-[320px] h-[310px] border-1 rounded-md hover:shadow-lg transform hover:scale-105 duration-300 ease-in-out" href={news.newsLink || "link"} target="_blank">
+                                <a key={news._id} className="z-0 cursor-pointer w-[320px] h-[310px] border-1 rounded-md hover:shadow-lg transform hover:scale-105 duration-300 ease-in-out" href={news.newsLink || "link"} target="_blank">
                                     <figure>
                                         <img src={news?.newsImage || "https://fifpro.org//media/fhmfhvkx/messi-world-cup.jpg?rxy=0.48356841796117644,0.31512414378031967&width=880&height=440&rnd=133210253587130000"} className="h-[200px] w-[320px] rounded-md" alt="news" />
                                     </figure>

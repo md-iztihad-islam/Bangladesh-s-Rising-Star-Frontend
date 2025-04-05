@@ -1,7 +1,7 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
-const VENUE_API = 'https://api.bangladeshsrisingstars.com/api/v1/venue';
-//const VENUE_API = 'http://localhost:8000/api/v1/venue';
+//const VENUE_API = 'https://api.bangladeshsrisingstars.com/api/v1/venue';
+const VENUE_API = 'http://localhost:8000/api/v1/venue';
 
 export const venueApi = createApi({
     reducerPath: "venueApi",
