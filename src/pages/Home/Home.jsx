@@ -22,7 +22,7 @@ function Home() {
     return (
         <div className="w-full min-h-screen flex flex-col">
             {/* About Section */}
-            <div className="flex flex-col md:flex-row md:gap-10 justify-center items-center w-full h-[500px] px-10 text-black md:text-blue-800" style={{backgroundImage: "url('/aboutbg.jpg')", backgroundSize: "cover", backgroundPosition: "center"}}>
+            <div className="flex flex-col md:flex-row md:gap-10 justify-center items-center w-full h-[500px] px-10 text-white md:text-blue-800" style={{backgroundImage: "url('/aboutbg.jpg')", backgroundSize: "cover", backgroundPosition: "center"}}>
                 {/* Logo Section */}
                 <div className="w-[150px] h-[150px] md:h-full md:w-[25%] flex items-center justify-center">
                     <img src="/logo.png" className="h-full md:h-[80%] w-auto object-contain" alt="Logo" />
