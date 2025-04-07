@@ -145,8 +145,8 @@ function Home() {
                     <h1 className="font-bold text-md md:text-3xl">Our Sponsors</h1>
                     <div className="flex flex-wrap gap-4 md:gap-20 justify-center items-center mt-5">
                         <img src="/fresh.png" alt="bff" className="h-[80px] w-[80px] md:h-[150px] md:w-[150px]" />
-                        <img src="/prime.png" alt="bff" className="h-[80px] w-[80px] md:h-[150px] md:w-[150px]" />
-                        <img src="/dr.jpg" alt="bff" className="h-[80px] w-[80px] md:h-[150px] md:w-[150px]" />
+                        <img src="/primeBank.png" alt="bff" className="h-[80px] w-[80px] md:h-[150px] md:w-[150px]" />
+                        <img src="/doubleRainbow.png" alt="bff" className="h-[80px] w-[80px] md:h-[150px] md:w-[150px]" />
                     </div>
                 </div>
 
