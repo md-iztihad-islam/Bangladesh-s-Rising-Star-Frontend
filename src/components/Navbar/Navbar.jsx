@@ -13,7 +13,7 @@ function Navbar(){
             <div id="upperPart" className="w-full flex justify-between items-center p-5 border-b-2">
 
                 <div>
-                    <img src="bff.jpg" alt="" className='h-[60px]' />
+                    <img src="/bff.jpg" alt="" className='h-[60px]' />
                 </div>
 
 
@@ -93,7 +93,7 @@ function Navbar(){
 
             {/* Desktop menu */}
 
-            <div id="lowerPart" className="w-full hidden h-[50px] md:flex flex-wrap justify-around items-center pl-5 pr-5 md:pl-5 md:pr-5 bg-[#37003C] text-white">
+            <div id="lowerPart" className="w-full hidden h-[50px] md:flex flex-wrap justify-around items-center pl-5 pr-5 md:pl-5 md:pr-5 bg-[#d54ee1] text-white">
                 <button onClick={() => navigate("/")} className="btn btn-ghost sm:btn-sm md:btn-md lg:btn-lg  ">Home</button>
                 <button onClick={() => navigate("/news")} className="btn btn-ghost sm:btn-sm md:btn-md lg:btn-lg  ">News</button>
                 <button onClick={() => navigate("/about")} className="btn btn-ghost sm:btn-sm md:btn-md lg:btn-lg ">Tournament</button>

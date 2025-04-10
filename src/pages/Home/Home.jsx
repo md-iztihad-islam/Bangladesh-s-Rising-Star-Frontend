@@ -20,16 +20,16 @@ function Home() {
     const matches = sortedMatch?.slice(0, 6);
 
     return (
-        <div className="w-full min-h-screen flex flex-col">
+        <div className="w-full min-h-screen flex flex-col justify-center items-center">
             {/* About Section */}
-            <div className="flex flex-col md:flex-row md:gap-10 justify-center items-center w-full h-[500px] px-10 text-white md:text-blue-800" style={{backgroundImage: "url('/aboutbg.jpg')", backgroundSize: "cover", backgroundPosition: "center"}}>
+            <div className="flex flex-col md:flex-row md:gap-10 justify-center items-center w-[80%] h-[600px] md:h-[400px] bg-gray-100 shadow-lg mt-10 p-10 text-black">
                 {/* Logo Section */}
-                <div className="w-[150px] h-[150px] md:h-full md:w-[25%] flex items-center justify-center">
-                    <img src="/logo.png" className="h-full md:h-[80%] w-auto object-contain" alt="Logo" />
+                <div className="w-[200px] h-[200px] md:h-full md:w-[35%] flex items-center justify-center">
+                    <img src="/logo.png" className="h-full w-auto object-contain" alt="Logo" />
                 </div>
 
                 {/* Text Section */}
-                <div className="md:h-full md:w-[65%] flex items-center">
+                <div className="md:h-full md:w-[55%] flex items-center">
                     <p className="text-justify text-sm md:text-lg font-medium leading-relaxed">
                         <strong>The DHAKA’s RISING STARS</strong>, an inter-school football tournament, is a landmark initiative by the <strong>Bangladesh Football Federation (BFF)</strong>, aimed at nurturing young football talent and fostering a sense of school community through football. This event promotes teamwork, resilience, and fair play among school students, while providing a platform for future stars of Bangladeshi football to showcase their potential and learn professional standards at an early age.
                     </p>
@@ -81,7 +81,7 @@ function Home() {
                         <div className="carousel carousel-center rounded-box w-full">
                             {
                                 tournamentList?.[0]?.teams?.map((team) => (
-                                    <div className="carousel-item" key={team._id}>
+                                    <div className="carousel-item cursor-pointer" key={team._id}>
                                         <div className="flex flex-col gap-2 justify-center items-center w-full" onClick={() => navigate(`/${tournamentData?._id}/${team._id}`)}>
                                             <img src={team.teamLogo || "https://cdn.freebiesupply.com/images/large/2x/manchester-city-logo-png-transparent.png"} alt="teams" className="h-[100px] w-[100px] md:h-[200px] md:w-[200px] m-5" />
                                             <p className="text-sm md:text-xl font-light">{team.teamName}</p>
@@ -98,7 +98,7 @@ function Home() {
                         <div className="carousel carousel-center rounded-box w-full">
                             {
                                 tournamentList?.[1]?.teams.map((team) => (
-                                    <div className="carousel-item" key={team._id}>
+                                    <div className="carousel-item cursor-pointer" key={team._id}>
                                         <div className="flex flex-col gap-2 justify-center items-center w-full" onClick={() => navigate(`/${tournamentData?._id}/${team._id}`)}>
                                             <img src={team.teamLogo || "https://cdn.freebiesupply.com/images/large/2x/manchester-city-logo-png-transparent.png" }alt="teams" className="h-[100px] w-[100px] md:h-[200px] md:w-[200px] m-5" />
                                             <p className="text-sm md:text-xl font-light">{team.teamName}</p>

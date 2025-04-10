@@ -67,6 +67,13 @@ export const tournamentApi = createApi({
                 body: teamObject
             }),
         }),
+        updateTeamData: builder.mutation({
+            query: ({ tournamentId, teamId, teamObject }) => ({
+                url: `${tournamentId}/${teamId}/updateteamdata`,
+                method: "POST",
+                body: teamObject
+            }),
+        }),
         addPlayer: builder.mutation({
             query: ({ tournamentId, teamId, registrationNo }) => ({
                 url: `${tournamentId}/${teamId}/addplayer`,
@@ -115,4 +122,4 @@ export const tournamentApi = createApi({
     })
 });
 
-export const { useCreateTournamentMutation, useGetTournamentQuery, useGetTournamentByIdQuery, useDeleteTournamentMutation, useCreateTeamMutation, useDeleteTeamMutation, useGetTeamByIdQuery, useGetTeamQuery, useAddPlayerMutation, useTeamPlayerQuery, useAddmatchMutation, useGetMatchByTournamentQuery, useGetMatchByIdQuery, useUpdateMatchMutation, useGetAllMatchesQuery, useUpdateTeamMutation } = tournamentApi;
+export const { useCreateTournamentMutation, useGetTournamentQuery, useGetTournamentByIdQuery, useDeleteTournamentMutation, useCreateTeamMutation, useDeleteTeamMutation, useGetTeamByIdQuery, useUpdateTeamDataMutation, useGetTeamQuery, useAddPlayerMutation, useTeamPlayerQuery, useAddmatchMutation, useGetMatchByTournamentQuery, useGetMatchByIdQuery, useUpdateMatchMutation, useGetAllMatchesQuery, useUpdateTeamMutation } = tournamentApi;

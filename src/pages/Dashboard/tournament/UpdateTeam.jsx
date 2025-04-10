@@ -2,7 +2,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { useGetMatchByIdQuery, useGetTeamByIdQuery, useUpdateMatchMutation, useUpdateTeamMutation } from "../../../api/tournamentApi";
 import { useEffect, useState } from "react";
 
-function UpdateMatch(){
+function UpdateTeam(){
     const navigate = useNavigate();
     const params = useParams();
 
@@ -119,4 +119,4 @@ function UpdateMatch(){
     )
 };
 
-export default UpdateMatch;
+export default UpdateTeam;

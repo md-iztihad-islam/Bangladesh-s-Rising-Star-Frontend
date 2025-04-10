@@ -1,8 +1,9 @@
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useGetTournamentByIdQuery } from "../../api/tournamentApi";
 
 function Teams(){
     const params = useParams();
+    const navigate = useNavigate();
     const idOfTournament = params.tournamentId;
 
     const {data} = useGetTournamentByIdQuery(idOfTournament);
@@ -17,7 +18,7 @@ function Teams(){
                             <div className="flex flex-col gap-5 mt-5">
                                 {
                                     tournamentData?.teams?.map((team) => (
-                                        <div className="flex gap-5 justify-between items-center" key={team._id}>
+                                        <div onClick={() => navigate(`${team._id}`)} className="flex gap-5 justify-between items-center cursor-pointer" key={team._id}>
                                             <img src={team.teamLogo} alt="" />
                                             <p className="text-lg md:text-2xl font-semibold">{team.teamName}</p>
                                         </div>

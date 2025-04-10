@@ -138,6 +138,7 @@ function AddTeam(){
                                             <button onClick={() => deleteHandler(team._id)} className="btn btn-square btn-ghost w-[100px]">Delete</button>
                                             <button onClick={() => navigate(`addplayer/${team._id}`)} className="btn btn-square btn-ghost w-[100px]">Add Player</button>
                                             <button onClick={() => navigate(`updateteam/${team._id}`)} className="btn btn-square btn-ghost w-[100px]">Update Team</button>
+                                            <button onClick={() => navigate(`updateteamdata/${team._id}`)} className="btn btn-square btn-ghost w-[100px]">Update Team Data</button>
                                         </div>
                                     </li>
                                 ))

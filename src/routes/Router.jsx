@@ -36,6 +36,7 @@ import TeamsFirst from "../pages/Teams/TeamsFirst";
 import Teams from "../pages/Teams/Teams";
 import Venue from "../pages/Venue/Venue";
 import VenueControl from "../pages/Dashboard/venue/VenueControl";
+import UpdateTeamData from "../pages/Dashboard/tournament/UpdateTeamData";
 
 const appRouter = createBrowserRouter([
     {
@@ -48,6 +49,10 @@ const appRouter = createBrowserRouter([
             },
             {
                 path: "/:tournamentId/:teamId",
+                element: <TeamPlayers />
+            },
+            {
+                path: "/teams/:tournamentId/:teamId",
                 element: <TeamPlayers />
             },
             {
@@ -181,6 +186,10 @@ const appRouter = createBrowserRouter([
             {
                 path: "/admin/tournamentcontrol/addteam/:tournamentId/updateteam/:teamId",
                 element: <AdminRoute> <UpdateTeam /> </AdminRoute>
+            },
+            {
+                path: "/admin/tournamentcontrol/addteam/:tournamentId/updateteamdata/:teamId",
+                element: <AdminRoute> <UpdateTeamData /> </AdminRoute>
             },
         ]
     }

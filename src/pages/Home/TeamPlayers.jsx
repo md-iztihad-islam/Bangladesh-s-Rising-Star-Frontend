@@ -12,6 +12,11 @@ function TeamPlayers(){
     return (
         <div>
             <div className="flex flex-col justify-center items-center mt-10 mb-10 p-5">
+                <h1 className="text-xl md:text-3xl font-bold mb-5">{teamData?.institutionName}</h1>
+                <img src={teamData?.teamLogo} className="w-[300px] h-[300px]" alt="" />
+                <div className="text-justify mb-5 md:p-12">
+                    {teamData?.teamDescription}
+                </div>
                 <h1 className="text-xl md:text-3xl font-bold">Player's of {teamData?.institutionName}</h1>
                 <div className="mt-10">
                     <div className="overflow-x-auto rounded-box border border-base-content/5 bg-base-100">
