@@ -25,8 +25,8 @@ function News(){
                                         <img src={news?.newsImage || "https://fifpro.org//media/fhmfhvkx/messi-world-cup.jpg?rxy=0.48356841796117644,0.31512414378031967&width=880&height=440&rnd=133210253587130000"} className="h-[200px] w-[320px] rounded-md" alt="news" />
                                     </figure>
                                     <div className="card-body h-[200px] w-[320px]">
-                                        <h2 className="text-lg font-semibold">{news?.newsTitle || ""}</h2>
-                                        <h2 className="text-md font-semibold overflow-hidden h-[45px]">{news?.newsDescription || ""}</h2>
+                                        <h2 className="text-md font-semibold">{news?.newsTitle || ""}</h2>
+                                        <h2 className="text-sm font-semibold overflow-hidden h-[45px]">{news?.newsDescription || ""}</h2>
                                         <p>{formattedDate}</p>
                                     </div>
                                 </a>
