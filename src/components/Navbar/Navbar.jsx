@@ -19,7 +19,7 @@ function Navbar(){
 
                 <div id="logo" className="flex flex-col justify-center items-center">
                     <div className='flex cursor-pointer' onClick={() => navigate("/")}>
-                        <p className='text-xl md:text-4xl text-red-600 font-bold'><span className='text-3xl md:text-7xl text-green-600 font-bold'>B</span>angladesh's Rising Star</p>
+                        <p className='text-lg md:text-4xl text-red-600 font-bold'><span className='text-2xl md:text-7xl text-green-600 font-bold'>B</span>angladesh's Rising Star</p>
                     </div>
                 </div>
 

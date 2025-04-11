@@ -165,7 +165,7 @@ function Home() {
                         matches?.map((match) => (
                             <div key={match._id}>
                                 {
-                                    match.isPlayed ? (
+                                    match.isPlayed && match.videoUrl && (
                                         <div onClick={() => navigate(`/highlights/${match._id}/${match.tournament._id}`)}  className="cursor-pointer hover:shadow-lg transform hover:scale-105 duration-300 ease-in-out mt-10">
                                             <div className="card bg-base-100 w-80 shadow-sm flex justify-center items-center">
                                                 <figure>
@@ -181,7 +181,7 @@ function Home() {
                                                 </div>
                                             </div>
                                         </div>
-                                    ) : null
+                                    )
                                 }
                             </div>
                         ))

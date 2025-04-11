@@ -25,14 +25,14 @@ function PointTable(){
         <div>
             <div className="flex flex-col mb-10 justify-center items-center mt-10">
                 <h1 className="text-xl md:text-3xl font-bold">Standings of Teams in Tournaments</h1>
-                <div>
+                <div className="flex flex-col justify-center items-center">
                     <div id="groupA" className="flex flex-col gap-5 mt-5">
                         <h2 className="text-lg font-bold">Group 01</h2>
-                        <div className="overflow-x-auto rounded-box border border-base-content/5 bg-base-100">
-                            <table className="table">
+                        <div className="overflow-x-auto w-screen rounded-box border border-base-content/5 bg-base-100">
+                            <table className="table text-xs md:text-md">
                                 {/* head */}
                                 <thead>
-                                <tr>
+                                <tr className="text-xs md:text-md">
                                     <th>Position</th>
                                     <th>Team</th>
                                     <th>GS</th>
@@ -44,7 +44,7 @@ function PointTable(){
                                 <tbody>
                                     {
                                         groupATeams?.map((team, index) => (
-                                            <tr key={team._id}>
+                                            <tr key={team._id} className="text-xs md:text-md">
                                                 <th>{index+1}</th>
                                                 <td>{team?.teamName}</td>
                                                 <td>{team?.goalsScored}</td>
@@ -61,11 +61,11 @@ function PointTable(){
 
                     <div id="groupB" className="flex flex-col gap-5 mt-5">
                         <h2 className="text-lg font-bold">Group 02</h2>
-                        <div className="overflow-x-auto rounded-box border border-base-content/5 bg-base-100">
-                            <table className="table">
+                        <div className="overflow-x-auto w-screen rounded-box border border-base-content/5 bg-base-100">
+                            <table className="table text-xs md:text-md">
                                 {/* head */}
                                 <thead>
-                                <tr>
+                                <tr className="text-xs md:text-md">
                                     <th>Position</th>
                                     <th>Team</th>
                                     <th>GS</th>
@@ -77,7 +77,7 @@ function PointTable(){
                                 <tbody>
                                     {
                                         groupBTeams?.map((team, index) => (
-                                            <tr key={team._id}>
+                                            <tr key={team._id} className="text-xs md:text-md">
                                                 <th>{index+1}</th>
                                                 <td>{team?.teamName}</td>
                                                 <td>{team?.goalsScored}</td>
